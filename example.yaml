@@ -1,0 +1,98 @@
+# GPIO15 LedLink (red led)
+# GPIO14 Led_i 1 (green led)
+# GPIO16 ETH POWER
+# GPIO18 ETH MDIO
+# GPIO23 ETH MDC
+# GPIO34 Button 1
+# GPIO12 Zigbee RST 2
+# GPIO13 Zigbee RST 1
+# GPIO02 Zigbee Tx
+# GPIO04 Zigbee Rx
+# GPIO32 I2C SCL 1
+# GPIO33 I2C SDA 1
+
+substitutions:
+  name: zb-gw03
+
+esphome:
+  name: ${name}
+  platform: ESP32
+  board: esp-wrover-kit
+  on_boot:
+    priority: 600
+    then:
+      - switch.turn_off: download_mode
+      - switch.turn_on: zigbee_reset
+
+external_components:
+  - source: github://oxan/esphome-stream-server
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 1
+  power_pin: GPIO16
+
+api:
+ota:
+logger:
+
+uart:
+  id: uart_zigbee
+  rx_pin: GPIO4
+  tx_pin: GPIO2
+  baud_rate: 115200
+
+stream_server:
+  uart_id: uart_zigbee
+  port: 6638
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO34
+      inverted: true
+    name: "${name} button"
+
+i2c:
+  - id: i2c_bus
+    sda: GPIO33
+    scl: GPIO32
+    scan: true
+
+status_led:
+  pin:
+    # red led
+    number: GPIO15
+    inverted: true
+
+switch:
+  - platform: restart
+    name: "${name} restart"
+
+  - platform: template
+    id: zigbee_reset
+    name: "${name} Zigbee Reset"
+    turn_on_action:
+      - switch.turn_on: zigbee_rst
+      - delay: 10ms
+      - switch.turn_off: zigbee_rst
+
+  # SM-011 V1.0 nRST
+  - platform: gpio
+    id: zigbee_rst
+    pin: GPIO13
+    name: "${name} Zigbee nRST"
+    inverted: true
+    internal: true
+    restore_mode: ALWAYS_OFF
+
+  # SM-011 V1.0 PA00
+  - platform: gpio
+    id: download_mode
+    pin: GPIO12
+    name: "${name} Zigbee Download Mode"
+    inverted: true
+    restore_mode: ALWAYS_OFF
