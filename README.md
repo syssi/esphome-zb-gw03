@@ -65,6 +65,7 @@ None.
 * https://templates.blakadder.com/ewelink_ZB-GW03
 * https://github.com/arendst/Tasmota/discussions/12764
 * https://github.com/tube0013/tube_gateways
+* https://github.com/thegroove/esphome-zbbridge
 * https://github.com/oxan/esphome-stream-server
 * [https://github.com/CoolKit-Technologies/DevDocs/blob/master/Zigbee/SM-011应用指导书.md](https://github.com/CoolKit-Technologies/DevDocs/blob/master/Zigbee/SM-011%E5%BA%94%E7%94%A8%E6%8C%87%E5%AF%BC%E4%B9%A6.md)
 * [https://community.home-assistant.io/t/zb-gw03-ewelink-ethernet-zigbee-gateway...](https://community.home-assistant.io/t/zb-gw03-ewelink-ethernet-zigbee-gateway-now-hacked-with-tasmota-zbbridge-so-can-be-used-via-mqtt-or-as-a-remote-zigbee-adapter-with-home-assistant-zha/341223)
