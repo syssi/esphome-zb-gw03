@@ -6,11 +6,20 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-zb-gw03)
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
 
-Esphome custom firmware for the Eachen eWeLink ZigBee Gateway.
+ESPHome custom firmware for ZB-GW03 eWeLink Ethernet Zigbee Gateway.
 
-## Supported devices
+## Compatible hardware
 
-* Eachen eWeLink ZigBee Smart Hub (ZB-GW03-V1.0, ZB-GW03-V1.2, ZB-GW03-V1.3)
+ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs EFR32MG21 Zigbee radio (CoolKit-Technologies "SM-011 V1.0" module).
+
+### Supported devices
+
+* ZB-GW03 eWeLink Ethernet Zigbee Gateway (ZB-GW03-V1.0, ZB-GW03-V1.2, ZB-GW03-V1.3), also sold rebranded as:
+  * Eachen eWeLink ZigBee Smart Hub
+    * https://ewelink.eachen.cc/product/eachen-ewelink-zigbee-bridge-pro-zbbridge-pro/
+    * https://ewelinkcommunity.net/device-lists/zigbee/eachen-zb-gw03/
+  * SmartWise Zigbee Bridge Pro
+    * https://www.okosabbotthon.hu/smartwise-zigbee-bridge-pro
 
 ## Requirements
 
@@ -72,4 +81,5 @@ None.
 * https://github.com/thegroove/esphome-zbbridge
 * https://github.com/oxan/esphome-stream-server
 * [https://github.com/CoolKit-Technologies/DevDocs/blob/master/Zigbee/SM-011应用指导书.md](https://github.com/CoolKit-Technologies/DevDocs/blob/master/Zigbee/SM-011%E5%BA%94%E7%94%A8%E6%8C%87%E5%AF%BC%E4%B9%A6.md)
+  * https://github.com/zigpy/zigpy/discussions/586
 * [https://community.home-assistant.io/t/zb-gw03-ewelink-ethernet-zigbee-gateway...](https://community.home-assistant.io/t/zb-gw03-ewelink-ethernet-zigbee-gateway-now-hacked-with-tasmota-zbbridge-so-can-be-used-via-mqtt-or-as-a-remote-zigbee-adapter-with-home-assistant-zha/341223)
