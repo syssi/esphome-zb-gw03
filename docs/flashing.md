@@ -204,7 +204,10 @@ wires.
 
 ## Add the ESPHome node to Home Assistant
 
-TBD.
+* Add the ESPHome integration
+* As soon the new ESPHome device is online it should be discovered automatically
+* Goto the integration page and configure the new ESPHome device
+* The new device plus some entites are available now
 
 ## Flash the Zigbee module
 
@@ -247,4 +250,9 @@ Turn "download mode" switch OFF and toggle "zigbee reset" again. The Zigbee modu
 
 ## Connect the device to the ZHA integration of Home Assistant
 
-TBD.
+* Goto the integration page of Home Assistant
+* Use the "Add integration" button
+* Search for "ZHA" (Zigbee Home Automation)
+* Choose "Enter Manually" at the serial port selection dialog
+* Choose "EZSP" as type of your Zigbee radio
+* The serial device path is `socket://esphome_node_name.local:6638` (f.e. `socket://zb-gw03.local:6638` if you use the `example.yaml`). Enter `115200` baud as port speed and the "data flow control" is `software`
