@@ -79,24 +79,65 @@ Additional (yet untested) firmware versions:
 esphome run router-example.yaml
 ```
 
-3. Upload the router firmware to the Zigbee module
+3. Install the xmodem file transfer tool lrzsz
 
 ```
 apt-get install lrzsz
-wget https://github.com/digiblur/Tasmota/raw/development/zigbee_router/efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
+```
 
+4. Download the router firmware image
+
+```
+wget https://github.com/digiblur/Tasmota/raw/development/zigbee_router/efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
+```
+
+5. Boot the Zigbee module into the download mode
+
+```
 # Turn "download mode" switch ON
 # Toggle "zigbee reset" switch
 # Turn "download mode" switch OFF
-# A shutdown of Home Assistant isn't required because the serial bridge shouldn't be in use by ZHA
+```
 
-telnet 192.168.132.230 6638
+6. Telnet to the bootloader of the Zigbee module and select "upload gbl"
+  - `telnet 192.168.132.230 6638`
+  - Press `return`
+  - Press `1` and `return` to select "upload gbl"
 
-# Press return
-# Press 1 (upload gbl)
-# Close the telnet connection
-# Upload the new firmware
-sx -vv -X -b --tcp-client 192.168.132.230:6638 efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
+```
+$ telnet 192.168.132.230 6638
+Trying 192.168.132.230...
+Connected to 192.168.132.230.
+Escape character is '^]'.
+
+Gecko Bootloader v1.9.1.04
+1. upload gbl
+2. run
+3. ebl info
+BL >
+Gecko Bootloader v1.9.1.04
+1. upload gbl
+2. run
+3. ebl info
+BL > 1
+
+begin upload
+```
+
+7. Goto a second terminal and upload the new firmware. You don't need to cancel the telnet session.
+
+```
+$ sx -vv -X -b --tcp-client 192.168.132.230:6638 efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
+connecting to [192.168.132.230] <6638>
+
+Sending efr32mg21_zigbee_router_signed-6.7.10.gbl.ota, 1843 blocks: Give your local XMODEM receive command now.
+Bytes Sent: 236032   BPS:3556
+
+Transfer complete
+```
+
+8. Restart the Zigbee module via Home Asisstant or Reboot the whole device
+
 
 # Open Home Assistant and goto the ESPHome device (Settings -> Devices & Services -> Devices)
 # Press the "Enable pairing mode" button

@@ -12,3 +12,6 @@ packages:
       - packages/button_zigbee_reset.yaml
       - packages/zeroconf.yaml
     refresh: 0s
+
+ota:
+  password: !secret ota_password
