@@ -78,4 +78,4 @@ Transfer complete
 
 #### 10. The Router can be paired now with your Zigbee Coordinator. If you use ZHA go to your Zigbee Coordinator Device and press "Add device".
 
-![Paired Zigbee router](zha-paired-router.png "Paired Zigbee router")
+![Paired Zigbee router](../images/zha-paired-router.png "Paired Zigbee router")

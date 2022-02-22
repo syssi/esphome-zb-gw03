@@ -6,7 +6,7 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-zb-gw03)
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
 
-ESPHome custom firmware for ZB-GW03 eWeLink Ethernet Zigbee Gateway.
+ESPHome custom firmware for ZB-GW03 eWeLink Ethernet Zigbee Gateway
 
 ## Compatible hardware
 
@@ -23,7 +23,7 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 ## Requirements
 
-* [ESPHome 2021.9.3](https://github.com/esphome/esphome/releases).
+* [ESPHome 2021.9.3](https://github.com/esphome/esphome/releases) (see "Known issues")
 
 ## Quick start guides
 
