@@ -76,6 +76,8 @@ Transfer complete
 #### 9. Enable the "Pairing Mode"
   - Goto the ESPHome device in Home Assistant and turn the "Enable Pairing Mode" switch on
 
-#### 10. The Router can be paired now with your Zigbee Coordinator. If you use ZHA go to your Zigbee Coordinator Device and press "Add device".
+#### 10. The Router can be paired now with your Zigbee Coordinator
+
+If you use ZHA go to your Zigbee Coordinator Device and press "Add device".
 
 ![Paired Zigbee router](../images/zha-paired-router.png "Paired Zigbee router")
