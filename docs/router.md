@@ -16,7 +16,7 @@ esphome run router-example.yaml
 
 #### 3. Install the xmodem file transfer tool lrzsz
 
-```shell
+```sh
 apt-get install lrzsz
 ```
 
@@ -38,7 +38,7 @@ wget https://github.com/digiblur/Tasmota/raw/development/zigbee_router/efr32mg21
   - Press `return`
   - Press `1` and `return` to select "upload gbl"
 
-```
+```shell
 $ telnet 192.168.132.230 6638
 Trying 192.168.132.230...
 Connected to 192.168.132.230.
@@ -60,7 +60,7 @@ begin upload
 
 #### 7. Goto a second terminal and upload the new firmware. You don't need to cancel the telnet session
 
-```
+```shell
 $ sx -vv -X -b --tcp-client 192.168.132.230:6638 efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
 connecting to [192.168.132.230] <6638>
 
