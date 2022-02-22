@@ -10,6 +10,3 @@ packages:
       - packages/status_led.yaml
       - packages/button_pairing_mode.yaml
     refresh: 0s
-
-ota:
-  password: !secret ota_password
