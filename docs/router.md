@@ -10,19 +10,19 @@
 
 #### 2. Flash the `router-example.yaml` to your ZB-GW03
 
-```
+```shell
 esphome run router-example.yaml
 ```
 
 #### 3. Install the xmodem file transfer tool lrzsz
 
-```
+```shell
 apt-get install lrzsz
 ```
 
 #### 4. Download the Zigbee router firmware image
 
-```
+```shell
 wget https://github.com/digiblur/Tasmota/raw/development/zigbee_router/efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
 ```
 
