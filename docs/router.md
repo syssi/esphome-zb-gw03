@@ -16,7 +16,7 @@ esphome run router-example.yaml
 
 #### 3. Install the xmodem file transfer tool lrzsz
 
-```sh
+```shell
 apt-get install lrzsz
 ```
 
