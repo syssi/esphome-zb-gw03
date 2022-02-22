@@ -28,9 +28,9 @@ wget https://github.com/digiblur/Tasmota/raw/development/zigbee_router/efr32mg21
 
 #### 5. Boot the Zigbee module into the download mode
 
-- Turn on the `Download Mode` switch entity via Home Assistant
-- Turn on the `Zigbee Reset` switch entity via Home Assistant (goes to "off" automatically)
-- Turn off the `Download Mode`
+- Turn `on` the `Download Mode` switch entity via Home Assistant
+- Turn `on` the `Zigbee Reset` switch entity via Home Assistant (goes to "off" automatically)
+- Turn `off` the `Download Mode`
 
 #### 6. Telnet to the bootloader of the Zigbee module and select "upload gbl"
 
@@ -58,7 +58,7 @@ BL > 1
 begin upload
 ```
 
-#### 7. Goto a second terminal and upload the new firmware. You don't need to cancel the telnet session
+#### 7. Go to a second terminal and upload the new firmware. You don't need to cancel the telnet session
 
 ```
 $ sx -vv -X -b --tcp-client 192.168.132.230:6638 efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
@@ -76,7 +76,7 @@ Press the `Zigbee Reset` switch or `Restart` switch.
 
 #### 9. Enable the "Pairing Mode"
 
-Goto the ESPHome device in Home Assistant and turn the "Enable Pairing Mode" switch on.
+Go to the ESPHome device in Home Assistant and turn the `Enable Pairing Mode` switch `on`. The switch goes back to `off` after a few seconds. This is fine!
 
 #### 10. The Router can be paired now with your Zigbee Coordinator
 
