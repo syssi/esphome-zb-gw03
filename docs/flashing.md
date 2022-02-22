@@ -127,8 +127,8 @@ Setup an ESPHome Project (see [README.md](../README.md)), compile the firmware f
 flash the firmware to the device:
 
 ```
-$ esphome run example.yaml
-INFO Reading configuration example.yaml...
+$ esphome run coordinator-example.yaml
+INFO Reading configuration coordinator-example.yaml...
 WARNING GPIO4 is a Strapping PIN and should be avoided.
 Attaching external pullup/down resistors to strapping pins can cause unexpected failures.
 See https://esphome.io/guides/faq.html#why-am-i-getting-a-warning-about-strapping-pins
@@ -255,4 +255,4 @@ Turn "download mode" switch OFF and toggle "zigbee reset" again. The Zigbee modu
 * Search for "ZHA" (Zigbee Home Automation)
 * Choose "Enter Manually" at the serial port selection dialog
 * Choose "EZSP" as type of your Zigbee radio
-* The serial device path is `socket://esphome_node_name.local:6638` (f.e. `socket://zb-gw03.local:6638` if you use the `example.yaml`). Enter `115200` baud as port speed and the "data flow control" is `software`
+* The serial device path is `socket://esphome_node_name.local:6638` (f.e. `socket://zb-gw03.local:6638` if you use the `coordinator-example.yaml`). Enter `115200` baud as port speed and the "data flow control" is `software`
