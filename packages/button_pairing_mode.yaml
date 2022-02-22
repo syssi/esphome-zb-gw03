@@ -9,13 +9,14 @@
 #       - delay: 5s
 #       - switch.turn_off: download_mode
 
-- platform: template
-  id: zigbee_pairing_mode
-  name: "${name} Toggle pairing mode"
-  turn_on_action:
-    - switch.turn_on: download_mode
-    - delay: 5s
-    - switch.turn_off: download_mode
+switch:
+  - platform: template
+    id: zigbee_pairing_mode
+    name: "${name} Toggle pairing mode"
+    turn_on_action:
+      - switch.turn_on: download_mode
+      - delay: 5s
+      - switch.turn_off: download_mode
 
 binary_sensor:
   - platform: gpio
