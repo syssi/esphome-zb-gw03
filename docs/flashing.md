@@ -1,5 +1,11 @@
 # Flashing guide
 
+![GitHub actions](https://github.com/syssi/esphome-zb-gw03/actions/workflows/ci.yaml/badge.svg)
+![GitHub stars](https://img.shields.io/github/stars/syssi/esphome-zb-gw03)
+![GitHub forks](https://img.shields.io/github/forks/syssi/esphome-zb-gw03)
+![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-zb-gw03)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
+
 Table of contents:
 * [Warning](#warning)
 * [Tools needed](#tools-needed)
