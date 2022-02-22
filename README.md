@@ -69,11 +69,11 @@ Additional (yet untested) firmware versions:
 * https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/EZSP
 * https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/RouterForDongle
 
-## Howto convert the router into a coordinator
+## How to convert the router into a coordinator
 
-1. Make sure Home Assistant (ZHA) doesn't use the device as coordinator.
+#### 1. Make sure Home Assistant (ZHA) doesn't use the device as coordinator.
 
-2. Flash the `router-example.yaml` to your ZB-GW03
+### 2. Flash the `router-example.yaml` to your ZB-GW03
 
 ```
 esphome run router-example.yaml
