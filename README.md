@@ -27,7 +27,7 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 ## Installation
 
-Use the `example.yaml` as proof of concept:
+Use the `coordinator-example.yaml` as proof of concept:
 
 ```bash
 # Install esphome
@@ -38,7 +38,7 @@ git clone https://github.com/syssi/esphome-zb-gw03.git
 cd esphome-zb-gw03
 
 # Validate the configuration, create a binary, upload it, and start logs
-esphome run example.yaml
+esphome run coordinator-example.yaml
 ```
 
 ## Flash the Zigbee module via telnet
@@ -68,6 +68,40 @@ Additional (yet untested) firmware versions:
 * https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/ZigbeeBridge_SM-011
 * https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/EZSP
 * https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/RouterForDongle
+
+## Howto convert the router into a coordinator
+
+1. Make sure Home Assistant (ZHA) doesn't use the device as coordinator.
+
+2. Flash the `router-example.yaml` to your ZB-GW03
+
+```
+esphome run router-example.yaml
+```
+
+3. Upload the router firmware to the Zigbee module
+
+```
+apt-get install lrzsz
+wget https://github.com/digiblur/Tasmota/raw/development/zigbee_router/efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
+
+# Turn "download mode" switch ON
+# Toggle "zigbee reset" switch
+# Turn "download mode" switch OFF
+# A shutdown of Home Assistant isn't required because the serial bridge shouldn't be in use by ZHA
+
+telnet 192.168.132.230 6638
+
+# Press return
+# Press 1 (upload gbl)
+# Close the telnet connection
+# Upload the new firmware
+sx -vv -X -b --tcp-client 192.168.132.230:6638 efr32mg21_zigbee_router_signed-6.7.10.gbl.ota
+
+# Open Home Assistant and goto the ESPHome device (Settings -> Devices & Services -> Devices)
+# Press the "Enable pairing mode" button
+# The Router can be paired now with your Zigbee Coordinator. If you use ZHA goto your Zigbee Coordinator Device and press "Add device".
+```
 
 ## Known issues
 
