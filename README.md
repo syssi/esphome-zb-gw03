@@ -6,7 +6,7 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-zb-gw03)
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
 
-ESPHome custom firmware for ZB-GW03 eWeLink Ethernet Zigbee Gateway.
+ESPHome custom firmware for ZB-GW03 eWeLink Ethernet Zigbee Gateway
 
 ## Compatible hardware
 
@@ -23,55 +23,19 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 ## Requirements
 
-* [ESPHome 2021.10.0 or higher](https://github.com/esphome/esphome/releases).
+* [ESPHome 2021.9.3](https://github.com/esphome/esphome/releases) (see "Known issues")
 
-## Installation
+## Quick start guides
 
-Use the `example.yaml` as proof of concept:
-
-```bash
-# Install esphome
-pip3 install esphome
-
-# Clone this external component
-git clone https://github.com/syssi/esphome-zb-gw03.git
-cd esphome-zb-gw03
-
-# Validate the configuration, create a binary, upload it, and start logs
-esphome run example.yaml
-```
-
-## Flash the Zigbee module via telnet
-
-This step is required only if the Zigbee module (SM-011 V1.0, EFR32MG21) wasn't flashed via Tasmota.
-
-```bash
-apt-get install lrzsz
-wget https://github.com/arendst/Tasmota/raw/development/tools/fw_SonoffZigbeeBridge_ezsp/ncp-uart-sw_6.7.8_115200.ota
-
-# Turn "download mode" switch ON
-# Toggle "zigbee reset" switch
-# Turn "download mode" switch OFF
-# Shutdown Home Assistant (we are trying to avoid multiple cnnections to the stream_server)
-
-telnet 192.168.132.230 6638
-
-# Press return
-# Press 1 (upload gbl)
-# Close the telnet connection
-# Upload the new firmware
-sx -vv -X -b --tcp-client 192.168.132.230:6638 ncp-uart-sw_6.7.8_115200.ota
-```
-
-Additional (yet untested) firmware versions: 
-
-* https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/ZigbeeBridge_SM-011
-* https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/EZSP
-* https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/RouterForDongle
+* [Flash ESPHome and use the ZB-GW03 as Zigbee Coordinator](docs/flashing.md)
+* [How to convert the router into a coordinator](docs/router.md)
 
 ## Known issues
 
-None.
+* Watchdog heartbeat timeouts if you use ESPHome `>2021.9.3` ([#8][i8])<br/>
+  https://github.com/oxan/esphome-stream-server/issues/14
+
+[i8]: https://github.com/syssi/esphome-zb-gw03/issues/8
 
 ## References
 

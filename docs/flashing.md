@@ -1,5 +1,11 @@
 # Flashing guide
 
+![GitHub actions](https://github.com/syssi/esphome-zb-gw03/actions/workflows/ci.yaml/badge.svg)
+![GitHub stars](https://img.shields.io/github/stars/syssi/esphome-zb-gw03)
+![GitHub forks](https://img.shields.io/github/forks/syssi/esphome-zb-gw03)
+![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-zb-gw03)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
+
 Table of contents:
 * [Warning](#warning)
 * [Tools needed](#tools-needed)
@@ -127,8 +133,8 @@ Setup an ESPHome Project (see [README.md](../README.md)), compile the firmware f
 flash the firmware to the device:
 
 ```
-$ esphome run example.yaml
-INFO Reading configuration example.yaml...
+$ esphome run coordinator-example.yaml
+INFO Reading configuration coordinator-example.yaml...
 WARNING GPIO4 is a Strapping PIN and should be avoided.
 Attaching external pullup/down resistors to strapping pins can cause unexpected failures.
 See https://esphome.io/guides/faq.html#why-am-i-getting-a-warning-about-strapping-pins
@@ -255,4 +261,4 @@ Turn "download mode" switch OFF and toggle "zigbee reset" again. The Zigbee modu
 * Search for "ZHA" (Zigbee Home Automation)
 * Choose "Enter Manually" at the serial port selection dialog
 * Choose "EZSP" as type of your Zigbee radio
-* The serial device path is `socket://esphome_node_name.local:6638` (f.e. `socket://zb-gw03.local:6638` if you use the `example.yaml`). Enter `115200` baud as port speed and the "data flow control" is `software`
+* The serial device path is `socket://esphome_node_name.local:6638` (f.e. `socket://zb-gw03.local:6638` if you use the `coordinator-example.yaml`). Enter `115200` baud as port speed and the "data flow control" is `software`

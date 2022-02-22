@@ -1,5 +1,5 @@
 substitutions:
-  name: zb-gw03-router
+  name: zb-gw03-coordinator
 
 packages:
   zb-gw03:
