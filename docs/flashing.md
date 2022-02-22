@@ -88,7 +88,7 @@ instructures can be found here:
 
 Here's an example on how to backup the original firmware by the esptool read_flash command:
 
-```shell
+```
 $ python esptool.py -p /dev/ttyUSB0 read_flash 0x0 0x400000 oem-firmware.bin
 esptool.py v3.2
 Serial port /dev/ttyUSB0
@@ -120,7 +120,7 @@ to restore the original firmware, by fully flashing it back onto the device.
 
 First, bring the device into the download mode (`GPIO0` is connected to `GND`), then start the esptool write_flash command:
 
-```shell
+```
 python esptool.py -p /dev/ttyUSB0 write_flash 0x0 oem-firmware.bin
 ```
 
@@ -132,7 +132,7 @@ the firmware was uploaded correctly.
 Setup an ESPHome Project (see [README.md](../README.md)), compile the firmware for the gateway and
 flash the firmware to the device:
 
-```shell
+```
 $ esphome run coordinator-example.yaml
 INFO Reading configuration coordinator-example.yaml...
 WARNING GPIO4 is a Strapping PIN and should be avoided.
@@ -219,7 +219,7 @@ wires.
 
 Turn "download mode" switch ON and toggle "zigbee reset" switch once.
 
-```shell
+```
 $ telnet 192.168.132.225 6638
 Trying 192.168.132.225...
 Connected to 192.168.132.225.
