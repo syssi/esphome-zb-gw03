@@ -1,0 +1,19 @@
+button:
+  - platform: template
+    name: "${name} Enable Pairing Mode"
+    on_press:
+      - switch.turn_on: download_mode
+      - delay: 5s
+      - switch.turn_off: download_mode
+
+binary_sensor:
+  - platform: gpio
+    name: "${name} Enable Pairing Mode"
+    internal: true
+    pin:
+      number: GPIO34
+      inverted: true
+    on_press:
+      - switch.turn_on: download_mode
+      - delay: 5s
+      - switch.turn_off: download_mode

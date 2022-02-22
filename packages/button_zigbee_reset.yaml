@@ -1,0 +1,9 @@
+binary_sensor:
+  - platform: gpio
+    name: "${name} Zigbee Reset Button"
+    pin:
+      number: GPIO34
+      inverted: true
+    on_press:
+      - switch.turn_off: download_mode
+      - switch.turn_on: zigbee_reset

@@ -1,0 +1,12 @@
+substitutions:
+  name: zb-gw03-router
+
+packages:
+  zb-gw03:
+    url: https://github.com/syssi/esphome-zb-gw03
+    ref: main
+    files:
+      - packages/core.yaml
+      - packages/status_led.yaml
+      - packages/button_pairing_mode.yaml
+    refresh: 0s

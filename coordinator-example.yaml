@@ -1,0 +1,14 @@
+substitutions:
+  name: zb-gw03-coordinator
+
+packages:
+  zb-gw03:
+    url: https://github.com/syssi/esphome-zb-gw03
+    ref: main
+    files:
+      - packages/core.yaml
+      - packages/status_led.yaml
+      - packages/i2c.yaml
+      - packages/button_zigbee_reset.yaml
+      - packages/zeroconf.yaml
+    refresh: 0s
