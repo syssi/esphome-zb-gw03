@@ -32,7 +32,7 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 ## Known issues
 
-* Watchdog heartbeat timeouts if you use ESPHome `>2021.9.3` ([#8][i8])
+* Watchdog heartbeat timeouts if you use ESPHome `>2021.9.3` ([#8][i8])<br/>
   https://github.com/oxan/esphome-stream-server/issues/14
 
 [i8]: https://github.com/syssi/esphome-zb-gw03/issues/8
