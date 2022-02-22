@@ -1,0 +1,5 @@
+status_led:
+  pin:
+    # red led
+    number: GPIO15
+    inverted: true

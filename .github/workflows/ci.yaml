@@ -34,7 +34,9 @@ jobs:
           pip list
           esphome version
       - run: |
-          esphome config example.yaml
+          esphome config coordinator-example.yaml
+      - run: |
+          esphome config router-example.yaml
 
   esphome-compile:
     runs-on: ubuntu-latest
@@ -69,4 +71,6 @@ jobs:
           echo "::add-matcher::.github/workflows/matchers/gcc.json"
           echo "::add-matcher::.github/workflows/matchers/python.json"
       - run: |
-          esphome compile example.yaml
+          esphome compile coordinator-example.yaml
+      - run: |
+          esphome compile router-example.yaml
