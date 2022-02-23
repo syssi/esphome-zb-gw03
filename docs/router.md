@@ -76,7 +76,9 @@ Press the `Zigbee Reset` switch or `Restart` switch.
 
 #### 9. Enable the "Pairing Mode"
 
-Go to the ESPHome device in Home Assistant and turn the `Enable Pairing Mode` switch `on`. The switch goes back to `off` after a few seconds. This is fine!
+Primary method is to go to the ESPHome device in Home Assistant and turn the `Enable Pairing Mode` switch `on`. The switch goes back to `off` after a few seconds. This is fine!
+
+Alternative method to enable pairing mode is to use a paper clip to press the physical reset button of the device which is inside a hole located next to the USB power plug.
 
 #### 10. The Router can be paired now with your Zigbee Coordinator
 
