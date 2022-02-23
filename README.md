@@ -28,7 +28,7 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 ## Quick start guides
 
 * [Flash ESPHome and use the ZB-GW03 as Zigbee Coordinator](docs/flashing.md)
-* [How to convert the router into a coordinator](docs/router.md)
+* [How to convert from Zigbee Coordinator into a Zigbee Router device](docs/router.md)
 
 ## Known issues
 
