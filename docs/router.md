@@ -1,4 +1,4 @@
-# How to convert the router into a coordinator
+# How to convert from Zigbee Coordinator into a Zigbee Router device
 
 ![GitHub actions](https://github.com/syssi/esphome-zb-gw03/actions/workflows/ci.yaml/badge.svg)
 ![GitHub stars](https://img.shields.io/github/stars/syssi/esphome-zb-gw03)
