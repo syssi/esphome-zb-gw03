@@ -41,9 +41,24 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 * https://templates.blakadder.com/ewelink_ZB-GW03
 * https://github.com/arendst/Tasmota/discussions/12764
+* https://github.com/arendst/Tasmota/discussions/14168
+* https://github.com/arendst/Tasmota/discussions/11536
+* https://github.com/arendst/Tasmota/tree/development/tools/fw_SonoffZigbeeBridge_ezsp
+* https://github.com/xsp1989/zigbeeFirmware
 * https://github.com/tube0013/tube_gateways
-* https://github.com/thegroove/esphome-zbbridge
 * https://github.com/oxan/esphome-stream-server
+* https://github.com/thegroove/esphome-serial-server
+* https://github.com/thegroove/esphome-zbbridge
+* https://github.com/thegroove/esphome-zeroconf
+* https://github.com/thegroove/esphome-zha-ezsp-zeroconf
 * [https://github.com/CoolKit-Technologies/DevDocs/blob/master/Zigbee/SM-011应用指导书.md](https://github.com/CoolKit-Technologies/DevDocs/blob/master/Zigbee/SM-011%E5%BA%94%E7%94%A8%E6%8C%87%E5%AF%BC%E4%B9%A6.md)
   * https://github.com/zigpy/zigpy/discussions/586
 * [https://community.home-assistant.io/t/zb-gw03-ewelink-ethernet-zigbee-gateway...](https://community.home-assistant.io/t/zb-gw03-ewelink-ethernet-zigbee-gateway-now-hacked-with-tasmota-zbbridge-so-can-be-used-via-mqtt-or-as-a-remote-zigbee-adapter-with-home-assistant-zha/341223)
+* https://github.com/vahempio/Tasmota-for-eWeLink
+* https://thehelpfulidiot.com/a-wired-sonoff-zigbee-alternative
+* https://thehelpfulidiot.com/update-a-wired-sonoff-zigbee-alternative
+* https://thehelpfulidiot.com/update-2-a-wired-sonoff-zigbee-alternative
+* https://templates.blakadder.com/sonoff_ZBBridge.html
+* https://www.digiblur.com/2020/07/how-to-use-sonoff-zigbee-bridge-with.html
+* https://www.digiblur.com/2021/03/zigbee2mqtt-with-sonoff-zigbee-bridge.html
+* https://www.digiblur.com/2022/02/convert-sonoff-zigbee-bridge-to-router-repeater.html
