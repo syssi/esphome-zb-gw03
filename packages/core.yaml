@@ -16,13 +16,21 @@ substitutions:
 
 esphome:
   name: ${name}
-  platform: ESP32
-  board: esp-wrover-kit
+  comment: ${device_description}
+  project:
+    name: "syssi.esphome-zb-gw03"
+    version: 1.0.0
   on_boot:
     priority: 600
     then:
       - switch.turn_off: download_mode
       - switch.turn_on: zigbee_reset
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: esp-idf
+    version: latest
 
 external_components:
   - source: github://oxan/esphome-stream-server

@@ -34,8 +34,8 @@ jobs:
           pip list
           esphome version
       - run: |
+          sed -i "s#ref: main#ref: pull/${GITHUB_REF_NAME}#" *.yaml
           esphome config coordinator-example.yaml
-      - run: |
           esphome config router-example.yaml
 
   esphome-compile:
@@ -71,6 +71,6 @@ jobs:
           echo "::add-matcher::.github/workflows/matchers/gcc.json"
           echo "::add-matcher::.github/workflows/matchers/python.json"
       - run: |
+          sed -i "s#ref: main#ref: pull/${GITHUB_REF_NAME}#" *.yaml
           esphome compile coordinator-example.yaml
-      - run: |
           esphome compile router-example.yaml
