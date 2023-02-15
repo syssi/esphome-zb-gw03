@@ -35,7 +35,6 @@ jobs:
           esphome version
       - name: Validate example configurations
         run: |
-          sed -i "s#ref: main#ref: pull/${GITHUB_REF_NAME}#" *.yaml
           esphome config coordinator-example.yaml
           esphome config router-example.yaml
 
@@ -73,6 +72,5 @@ jobs:
           echo "::add-matcher::.github/workflows/matchers/python.json"
       - name: Compile example configurations
         run: |
-          sed -i "s#ref: main#ref: pull/${GITHUB_REF_NAME}#" *.yaml
           esphome compile coordinator-example.yaml
           esphome compile router-example.yaml
