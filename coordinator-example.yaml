@@ -1,5 +1,6 @@
 substitutions:
   name: zb-gw03-coordinator
+  device_description: "ZB-GW03 eWeLink Ethernet Zigbee Gateway based Zigbee Coordinator"
 
 packages:
   zb-gw03:
@@ -10,5 +11,5 @@ packages:
       - packages/status_led.yaml
       - packages/i2c.yaml
       - packages/button_zigbee_reset.yaml
-      - packages/zeroconf.yaml
+      - packages/mdns.yaml
     refresh: 0s
