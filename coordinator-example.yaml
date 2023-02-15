@@ -11,5 +11,5 @@ packages:
       - packages/status_led.yaml
       - packages/i2c.yaml
       - packages/button_zigbee_reset.yaml
-      - packages/zeroconf.yaml
+      - packages/mdns.yaml
     refresh: 0s

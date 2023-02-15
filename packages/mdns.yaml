@@ -1,6 +1,6 @@
-zeroconf:
+mdns:
   - service: tube_zb_gw_efr32
-    protocol: tcp
+    protocol: _tcp
     port: 6638
     txt:
       version: 1.0
