@@ -30,7 +30,6 @@ esp32:
   board: esp-wrover-kit
   framework:
     type: esp-idf
-    version: latest
 
 external_components:
   - source: github://oxan/esphome-stream-server
