@@ -286,7 +286,7 @@ If you're using the `configuration.yaml` either in the data directory or via the
 
 ```
 serial:
-  port: tcp://esphome_node_name:6638
+  port: tcp://esphome_node_name.local:6638
   adapter: ezsp
 ```
 
