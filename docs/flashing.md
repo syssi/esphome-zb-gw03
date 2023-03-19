@@ -280,7 +280,7 @@ If you're using the Zigbee2MQTT UI:
 * From the Adapter dropdown select `ezsp`
 * Baud rate already has a default of `115200` therefore it should need to be entered
 
-<img src="../images/zigbee2mqtt-serial-settings.png" width="600">
+<img src="../images/zigbee2mqtt-serial-settings.png" width="800">
 
 If you're using the `configuration.yaml` either in the data directory or via the UI of the Home Assistant extension then you will need to ensure that the `serial` section has the following properties:
 
