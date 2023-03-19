@@ -254,11 +254,40 @@ $
 
 Turn "download mode" switch OFF and toggle "zigbee reset" again. The Zigbee module will boot into the new firmware now.
 
-## Connect the device to the ZHA integration of Home Assistant
+## Connect the device to Home Assistant
+
+There are a few ways with which to integrate your ESPHome devices into Home Assistant, 2 popular systems are ZHA and Zigbee2MQTT.
+
+Note: If you're struggling to resolve `*.local` addresses i.e. zb-gw03.local then you may need to use the device IP Address instead.
+
+#### ZHA (Zigbee Home Automation)
 
 * Goto the integration page of Home Assistant
 * Use the "Add integration" button
-* Search for "ZHA" (Zigbee Home Automation)
+* Search for "ZHA"
 * Choose "Enter Manually" at the serial port selection dialog
 * Choose "EZSP" as type of your Zigbee radio
 * The serial device path is `socket://esphome_node_name.local:6638` (f.e. `socket://zb-gw03.local:6638` if you use the `coordinator-example.yaml`). Enter `115200` baud as port speed and the "data flow control" is `software`
+
+#### Zigbee2MQTT
+
+Configuration can be done via the Zigbee2MQTT UI, the `configuration.yaml` file or if you are using the Home Assistant extension for Zigbee2MQTT the UI allows you to edit the yaml configuration file.
+
+If you're using the Zigbee2MQTT UI:
+
+* Goto Settings -> Settings -> Serial
+* Enter the Port which should be `tcp://esphome_node_name.local:6638` (f.e. `tcp://zb-gw03.local:6638` if you use the `coordinator-example.yaml`)
+* From the Adapter dropdown select `ezsp`
+* Baud rate already has a default of `115200` therefore it should need to be entered
+
+<img src="../images/zigbee2mqtt-serial-settings.png" width="600">
+
+If you're using the `configuration.yaml` either in the data directory or via the UI of the Home Assistant extension then you will need to ensure that the `serial` section has the following properties:
+
+```
+serial:
+  port: tcp://esphome_node_name:6638
+  adapter: ezsp
+```
+
+
