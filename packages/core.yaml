@@ -42,9 +42,12 @@ ethernet:
   phy_addr: 1
   power_pin: GPIO16
 
-api:
 ota:
+
 logger:
+  level: DEBUG
+
+api:
 
 uart:
   id: uart_zigbee
