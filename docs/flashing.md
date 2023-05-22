@@ -220,6 +220,9 @@ wires.
 Turn "download mode" switch ON and toggle "zigbee reset" switch once.
 
 ```
+# Install required tools (telnet & sx)
+$ apt-get install telnet lrzsz
+
 $ telnet 192.168.132.225 6638
 Trying 192.168.132.225...
 Connected to 192.168.132.225.
