@@ -14,7 +14,7 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 ### Supported devices
 
-* ZB-GW03 eWeLink Ethernet Zigbee Gateway (ZB-GW03-V1.0, ZB-GW03-V1.2, ZB-GW03-V1.3), also sold rebranded as:
+* ZB-GW03 eWeLink Ethernet Zigbee Gateway (ZB-GW03-V1.0, ZB-GW03-V1.2, ZB-GW03-V1.3, ZB-GW03-V1.4), also sold rebranded as:
   * Eachen eWeLink ZigBee Smart Hub
     * https://ewelink.eachen.cc/product/eachen-ewelink-zigbee-bridge-pro-zbbridge-pro/
     * https://ewelinkcommunity.net/device-lists/zigbee/eachen-zb-gw03/
