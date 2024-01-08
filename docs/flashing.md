@@ -217,13 +217,22 @@ wires.
 
 ## Flash the Zigbee module
 
-Turn "download mode" switch ON and toggle "zigbee reset" switch once.
+In Home Assistant on the ESPHome device panel, select the device corresponding to the zb-gw03. Then turn "download mode" switch ON and toggle "zigbee reset" switch once.
+The device will go into Download Mode.
+
+Now make sure to have the necessary CLI tools to be able to flash the Zigbee firmware:
 
 ```
 # Install required tools (telnet & sx)
-$ apt-get install telnet lrzsz
+$ apt-get install telnet lrzsz # for Debian based Linux distributions
+# or
+$ brew install telnet lrzsz # for macOS
+```
 
+Then use telnet to turn on firmware uploading, by launching a telnet session against the current IP address of the zb-gw03 (replace 192.168.132.225 with your IP) and selecting option `1` when prompted:
+```
 $ telnet 192.168.132.225 6638
+
 Trying 192.168.132.225...
 Connected to 192.168.132.225.
 Escape character is '^]'.
@@ -241,10 +250,11 @@ Gecko Bootloader v1.9.1.04
 BL > 1
 
 begin upload
-C^]
-telnet> quit
-Connection closed.
-$
+C
+```
+
+Once the `begin upload` mode shows up, you can open a new terminal and issue the following command to upload. Note that if you are using macOS, you must use `lsx` instead of `sx`, with the same flags. You can find the firmware file to upload at [this GitHub repo](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/ZigbeeBridge_SM-011-signed):
+```
 $ sx -vv -X -b --tcp-client 192.168.132.225:6638 ncp-uart-sw_6.7.8_115200.ota
 connecting to [192.168.132.225] <6638>
 
@@ -252,10 +262,17 @@ Sending ncp-uart-sw_6.7.8_115200.ota, 1490 blocks: Give your local XMODEM receiv
 Bytes Sent: 190848   BPS:3841
 
 Transfer complete
-$
 ```
 
-Turn "download mode" switch OFF and toggle "zigbee reset" again. The Zigbee module will boot into the new firmware now.
+Once the transfer has completed you can close the previously opened telnet session at the other terminal (CTRL+C) followed by `quit`:
+
+```
+C^]
+telnet> quit
+Connection closed.
+```
+
+Now in Home Assistant on the ESPHome device panel, turn "download mode" switch OFF and toggle "zigbee reset" again. The Zigbee module will boot into the new firmware now.
 
 ## Connect the device to Home Assistant
 
