@@ -5,7 +5,7 @@ substitutions:
 packages:
   zb-gw03:
     url: https://github.com/syssi/esphome-zb-gw03
-    ref: main
+    ref: expose-gpio14-as-light
     files:
       - packages/core.yaml
       - packages/ethernet.yaml
