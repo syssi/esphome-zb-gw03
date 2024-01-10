@@ -8,6 +8,7 @@ packages:
     ref: main
     files:
       - packages/core.yaml
+      - packages/ethernet.yaml
       - packages/status_led.yaml
       - packages/button_pairing_mode.yaml
     refresh: 0s
