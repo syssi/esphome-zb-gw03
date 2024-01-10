@@ -19,7 +19,7 @@ esphome:
   comment: ${device_description}
   project:
     name: "syssi.esphome-zb-gw03"
-    version: 2.0.0
+    version: 2.0.1
   on_boot:
     priority: 600
     then:
@@ -33,14 +33,6 @@ esp32:
 
 external_components:
   - source: github://oxan/esphome-stream-server
-
-ethernet:
-  type: LAN8720
-  mdc_pin: GPIO23
-  mdio_pin: GPIO18
-  clk_mode: GPIO17_OUT
-  phy_addr: 1
-  power_pin: GPIO16
 
 ota:
 
