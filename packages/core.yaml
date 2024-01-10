@@ -43,7 +43,6 @@ ethernet:
   power_pin: GPIO16
 
 ota:
-  password: !secret ota_password
 
 logger:
   level: DEBUG
