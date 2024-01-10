@@ -7,3 +7,4 @@ output:
   - platform: ledc
     pin: GPIO14
     id: output0
+    inverted: true
