@@ -19,7 +19,7 @@ esphome:
   comment: ${device_description}
   project:
     name: "syssi.esphome-zb-gw03"
-    version: 1.0.0
+    version: 2.0.0
   on_boot:
     priority: 600
     then:
