@@ -1,0 +1,9 @@
+light:
+  - platform: monochromatic
+    name: "${name} green led"
+    output: output0
+
+output:
+  - platform: ledc
+    pin: GPIO14
+    id: output0
