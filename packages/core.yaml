@@ -35,6 +35,7 @@ external_components:
   - source: github://oxan/esphome-stream-server@master
 
 ota:
+  platform: esphome
 
 logger:
   level: DEBUG
