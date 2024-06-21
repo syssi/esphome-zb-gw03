@@ -23,7 +23,7 @@ ZB-GW03 Zigbee to LAN bridge/gateway based on Espressif ESP32 and a Silicon Labs
 
 ## Requirements
 
-* [ESPHome 2022.12.8](https://github.com/esphome/esphome/releases)
+* [ESPHome 2024.6.0](https://github.com/esphome/esphome/releases)
 
 ## Quick start guides
 
