@@ -255,11 +255,11 @@ C
 
 Once the `begin upload` mode shows up, you can open a new terminal and issue the following command to upload. Note that if you are using macOS, you must use `lsx` instead of `sx`, with the same flags. You can find the firmware file to upload at [this GitHub repo](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/ZigbeeBridge_SM-011-signed):
 ```
-$ sx -vv -X -b --tcp-client 192.168.132.225:6638 ncp-uart-sw_6.7.8_115200.ota
+$ sx -vv -X -b --tcp-client 192.168.132.225:6638 ncp-uart-sw_7.4.3.0_115200.ota
 connecting to [192.168.132.225] <6638>
 
-Sending ncp-uart-sw_6.7.8_115200.ota, 1490 blocks: Give your local XMODEM receive command now.
-Bytes Sent: 190848   BPS:3841
+Sending ncp-uart-sw_6.7.8_115200.ota, xxxx blocks: Give your local XMODEM receive command now.
+Bytes Sent: 247752   BPS:3841
 
 Transfer complete
 ```
