@@ -1,3 +1,6 @@
+# Using WiFi instead of ethernet isn't recommended
+# See https://github.com/syssi/esphome-zb-gw03/issues/49
+
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
