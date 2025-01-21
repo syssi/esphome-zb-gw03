@@ -35,7 +35,6 @@ esphome:
               {
                 {"name", "ZB-GW03"},
                 {"serial_number", get_mac_address()},
-                {"version", "1.0"},
                 {"radio_type", "ezsp"},
                 {"baud_rate", "115200"},
                 {"data_flow_control", "software"}
