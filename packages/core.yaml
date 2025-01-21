@@ -26,6 +26,22 @@ esphome:
     then:
       - switch.turn_off: download_mode
       - switch.turn_on: zigbee_reset
+      - lambda: |-
+          if(id(mdns0)) {
+            id(mdns0).add_extra_service({
+              "_zigbee-gateway",
+              "_tcp",
+              6638,
+              {
+                {"name", "ZB-GW03"},
+                {"serial_number", get_mac_address()},
+                {"version", "1.0"},
+                {"radio_type", "ezsp"},
+                {"baud_rate", "115200"},
+                {"data_flow_control", "software"}
+              }
+            });
+          }
 
 esp32:
   board: esp-wrover-kit
