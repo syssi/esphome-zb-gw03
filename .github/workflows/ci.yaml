@@ -38,6 +38,9 @@ jobs:
           esphome version
       - name: Validate example configurations
         run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            sed -i "s#ref: main#ref: ${{ github.event.pull_request.head.ref }}#" *.yaml
+          fi
           esphome config coordinator-example.yaml
           esphome config router-example.yaml
 
@@ -75,5 +78,8 @@ jobs:
           echo "::add-matcher::.github/workflows/matchers/python.json"
       - name: Compile example configurations
         run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            sed -i "s#ref: main#ref: ${{ github.event.pull_request.head.ref }}#" *.yaml
+          fi
           esphome compile coordinator-example.yaml
           esphome compile router-example.yaml
