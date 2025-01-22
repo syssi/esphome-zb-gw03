@@ -13,6 +13,8 @@
 
 substitutions:
   name: zb-gw03
+  # Gets overridden by mdns.yaml to avoid a breaking change
+  device_role: "router"
 
 esphome:
   name: ${name}
@@ -27,7 +29,7 @@ esphome:
       - switch.turn_off: download_mode
       - switch.turn_on: zigbee_reset
       - lambda: |-
-          if(id(mdns0)) {
+          if("${device_role}" == "coordinator") {
             id(mdns0).add_extra_service({
               "_zigbee-coordinator",
               "_tcp",
@@ -55,6 +57,9 @@ logger:
   level: DEBUG
 
 api:
+
+mdns:
+  id: mdns0
 
 uart:
   id: uart_zigbee
