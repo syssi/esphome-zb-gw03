@@ -38,8 +38,8 @@ jobs:
           esphome version
       - name: Validate example configurations
         run: |
-          esphome -s package_ref fix-build config coordinator-example.yaml
-          esphome -s package_ref fix-build config router-example.yaml
+          esphome config coordinator-example.yaml
+          esphome config router-example.yaml
 
   esphome-compile:
     runs-on: ubuntu-latest
@@ -75,5 +75,5 @@ jobs:
           echo "::add-matcher::.github/workflows/matchers/python.json"
       - name: Compile example configurations
         run: |
-          esphome -s package_ref fix-build compile coordinator-example.yaml
-          esphome -s package_ref fix-build compile router-example.yaml
+          esphome compile coordinator-example.yaml
+          esphome compile router-example.yaml

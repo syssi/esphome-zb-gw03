@@ -2,12 +2,11 @@ substitutions:
   name: zb-gw03-router
   device_description: "ZB-GW03 eWeLink Ethernet Zigbee Gateway based Zigbee Router"
   device_role: "router"
-  package_ref: "main"
 
 packages:
   zb-gw03:
     url: https://github.com/syssi/esphome-zb-gw03
-    ref: ${package_ref}
+    ref: fix-build
     files:
       - packages/core.yaml
       - packages/ethernet.yaml
