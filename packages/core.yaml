@@ -29,7 +29,7 @@ esphome:
       - lambda: |-
           if(id(mdns0)) {
             id(mdns0).add_extra_service({
-              "_zigbee-gateway",
+              "_zigbee-coordinator",
               "_tcp",
               6638,
               {
