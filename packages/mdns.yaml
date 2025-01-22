@@ -1,2 +1,2 @@
-mdns:
-  id: mdns0
+substitutions:
+  device_role: "coordinator"
