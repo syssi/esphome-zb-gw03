@@ -13,6 +13,8 @@
 
 substitutions:
   name: zb-gw03
+  # Gets overridden by mdns.yaml to avoid a breaking change
+  device_role: "router"
 
 esphome:
   name: ${name}
