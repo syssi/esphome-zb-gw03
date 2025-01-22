@@ -1,12 +1,12 @@
 substitutions:
   name: zb-gw03-coordinator
   device_description: "ZB-GW03 eWeLink Ethernet Zigbee Gateway based Zigbee Coordinator"
-  # device_role: "coordinator"
+  device_role: "coordinator"
 
 packages:
   zb-gw03:
     url: https://github.com/syssi/esphome-zb-gw03
-    ref: fix-build
+    ref: main
     files:
       - packages/core.yaml
       - packages/ethernet.yaml
