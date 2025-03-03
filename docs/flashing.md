@@ -258,7 +258,7 @@ Once the `begin upload` mode shows up, you can open a new terminal and issue the
 $ sx -vv -X -b --tcp-client 192.168.132.225:6638 ncp-uart-sw_7.4.3.0_115200.ota
 connecting to [192.168.132.225] <6638>
 
-Sending ncp-uart-sw_6.7.8_115200.ota, xxxx blocks: Give your local XMODEM receive command now.
+Sending ncp-uart-sw_7.4.3.0_115200.ota, xxxx blocks: Give your local XMODEM receive command now.
 Bytes Sent: 247752   BPS:3841
 
 Transfer complete
