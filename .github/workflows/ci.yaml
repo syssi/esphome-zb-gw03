@@ -51,11 +51,6 @@ jobs:
       - name: Copy external component into the esphome project
         run: |
           cd esphome
-          cp -r ../components/* esphome/components/
-          git config user.name "ci"
-          git config user.email "ci@github.com"
-          git add .
-          git commit -a -m "Add external component"
           ln -sf ../venv venv
 
       - name: Archive prepared repository
@@ -133,7 +128,7 @@ jobs:
             if [ "${{ github.event_name }}" = "pull_request" ]; then
               sed -i "s#ref: main#ref: ${{ github.event.pull_request.head.ref }}#" $YAML
             fi
-            esphome -s external_components_source components config $YAML >/dev/null
+            esphome config $YAML >/dev/null
           done
 
   esphome-compile:
@@ -162,5 +157,5 @@ jobs:
             if [ "${{ github.event_name }}" = "pull_request" ]; then
               sed -i "s#ref: main#ref: ${{ github.event.pull_request.head.ref }}#" $YAML
             fi
-            esphome -s external_components_source components compile $YAML >/dev/null
+            esphome compile $YAML >/dev/null
           done
