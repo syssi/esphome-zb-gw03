@@ -128,7 +128,7 @@ jobs:
             if [ "${{ github.event_name }}" = "pull_request" ]; then
               sed -i "s#ref: main#ref: ${{ github.event.pull_request.head.ref }}#" $YAML
             fi
-            esphome config $YAML >/dev/null
+            esphome config $YAML
           done
 
   esphome-compile:
@@ -157,5 +157,5 @@ jobs:
             if [ "${{ github.event_name }}" = "pull_request" ]; then
               sed -i "s#ref: main#ref: ${{ github.event.pull_request.head.ref }}#" $YAML
             fi
-            esphome compile $YAML >/dev/null
+            esphome compile $YAML
           done
