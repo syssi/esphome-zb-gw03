@@ -23,6 +23,8 @@ esphome:
   project:
     name: "syssi.esphome-zb-gw03"
     version: 2.1.0
+  platformio_options:
+    build_flags: "-DUSE_MDNS_EXTRA_SERVICES"
   on_boot:
     priority: 600
     then:
@@ -46,8 +48,6 @@ esp32:
   board: esp-wrover-kit
   framework:
     type: esp-idf
-  build_flags:
-    - -DUSE_MDNS_EXTRA_SERVICES
 
 external_components:
   - source: github://oxan/esphome-stream-server@master
