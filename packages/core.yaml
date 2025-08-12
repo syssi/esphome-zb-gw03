@@ -23,6 +23,8 @@ esphome:
   project:
     name: "syssi.esphome-zb-gw03"
     version: 2.1.0
+  platformio_options:
+    build_flags: "-DUSE_MDNS_EXTRA_SERVICES"
   on_boot:
     priority: 600
     then:
