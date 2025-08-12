@@ -46,8 +46,8 @@ esp32:
   board: esp-wrover-kit
   framework:
     type: esp-idf
-    build_flags:
-      - -DUSE_MDNS_EXTRA_SERVICES
+  build_flags:
+    - -DUSE_MDNS_EXTRA_SERVICES
 
 external_components:
   - source: github://oxan/esphome-stream-server@master
