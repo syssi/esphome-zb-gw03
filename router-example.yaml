@@ -1,7 +1,6 @@
 substitutions:
   name: zb-gw03-router
   device_description: "ZB-GW03 eWeLink Ethernet Zigbee Gateway based Zigbee Router"
-  device_role: "router"
 
 packages:
   zb-gw03:

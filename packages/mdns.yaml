@@ -1,2 +1,10 @@
-substitutions:
-  device_role: "coordinator"
+mdns:
+  services:
+    - service: "_zigbee-coordinator"
+      protocol: "_tcp"
+      port: 6638
+      txt:
+        version: 1
+        name: "ZB-GW03"
+        radio_type: "ezsp"
+        serial_number: !lambda 'return esphome::get_mac_address();'

@@ -13,8 +13,6 @@
 
 substitutions:
   name: zb-gw03
-  # Gets overridden by mdns.yaml to avoid a breaking change
-  device_role: "router"
 
 esphome:
   name: ${name}
@@ -23,26 +21,11 @@ esphome:
   project:
     name: "syssi.esphome-zb-gw03"
     version: 2.1.0
-  platformio_options:
-    build_flags: "-DUSE_MDNS_EXTRA_SERVICES"
   on_boot:
     priority: 600
     then:
       - switch.turn_off: download_mode
       - switch.turn_on: zigbee_reset
-      - lambda: |-
-          if("${device_role}" == "coordinator") {
-            id(mdns0).add_extra_service({
-              "_zigbee-coordinator",
-              "_tcp",
-              6638,
-              {
-                {"name", "ZB-GW03"},
-                {"serial_number", get_mac_address()},
-                {"radio_type", "ezsp"}
-              }
-            });
-          }
 
 esp32:
   board: esp-wrover-kit
