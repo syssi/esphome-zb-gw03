@@ -16,6 +16,7 @@ substitutions:
 
 esphome:
   name: ${name}
+  friendly_name: ${name}
   comment: ${device_description}
   min_version: 2024.6.0
   project:
@@ -58,11 +59,11 @@ stream_server:
 
 switch:
   - platform: restart
-    name: "${name} Restart"
+    name: "Restart"
 
   - platform: template
     id: zigbee_reset
-    name: "${name} Zigbee Reset"
+    name: "Zigbee Reset"
     turn_on_action:
       - switch.turn_on: zigbee_rst
       - delay: 10ms
@@ -72,7 +73,7 @@ switch:
   - platform: gpio
     id: zigbee_rst
     pin: GPIO13
-    name: "${name} Zigbee nRST"
+    name: "Zigbee nRST"
     inverted: true
     internal: true
     restore_mode: ALWAYS_OFF
@@ -81,6 +82,6 @@ switch:
   - platform: gpio
     id: download_mode
     pin: GPIO12
-    name: "${name} Zigbee Download Mode"
+    name: "Zigbee Download Mode"
     inverted: true
     restore_mode: ALWAYS_OFF
