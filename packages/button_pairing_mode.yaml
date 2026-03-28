@@ -3,7 +3,7 @@
 #
 # button:
 #   - platform: template
-#     name: "${name} Enable Pairing Mode"
+#     name: "Enable Pairing Mode"
 #     on_press:
 #       - switch.turn_on: download_mode
 #       - delay: 5s
@@ -12,7 +12,7 @@
 switch:
   - platform: template
     id: zigbee_pairing_mode
-    name: "${name} Toggle pairing mode"
+    name: "Toggle pairing mode"
     turn_on_action:
       - switch.turn_on: download_mode
       - delay: 5s
@@ -20,7 +20,7 @@ switch:
 
 binary_sensor:
   - platform: gpio
-    name: "${name} Enable Pairing Mode"
+    name: "Enable Pairing Mode"
     internal: true
     pin:
       number: GPIO34

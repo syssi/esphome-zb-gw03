@@ -1,6 +1,6 @@
 binary_sensor:
   - platform: gpio
-    name: "${name} Zigbee Reset Button"
+    name: "Zigbee Reset Button"
     pin:
       number: GPIO34
       inverted: true
