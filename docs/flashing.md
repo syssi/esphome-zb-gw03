@@ -309,5 +309,3 @@ serial:
   port: tcp://esphome_node_name.local:6638
   adapter: ezsp
 ```
-
-
