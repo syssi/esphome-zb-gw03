@@ -39,8 +39,13 @@ Detach the bottom lid from the rest of the device, exposing the PCB. This might 
 
 <img src="../images/005.jpg" width="400">
 <img src="../images/006.jpg" width="400">
-<img src="../images/010.jpg" width="400">
-<img src="../images/001.jpg" width="400">
+
+
+|        v1.3           |            v1.4
+| --------------------- | ------------------------- 
+![](../images/001.jpg)  |  ![](../images/zb-gw03-v1_4-front.jpg)
+![](../images/010.jpg)  |  ![](../images/zb-gw03-v1_4-rear.jpg)
+
 
 ## Solder wires to the board
 
