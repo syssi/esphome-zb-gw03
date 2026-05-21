@@ -21,7 +21,7 @@ esphome:
   min_version: 2024.6.0
   project:
     name: "syssi.esphome-zb-gw03"
-    version: 2.2.0
+    version: 2.3.0
   on_boot:
     priority: 600
     then:
