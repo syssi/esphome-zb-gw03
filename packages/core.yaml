@@ -34,7 +34,11 @@ esp32:
     type: esp-idf
 
 external_components:
-  - source: github://oxan/esphome-stream-server@master
+  # Temporary fork for ESPHome 2026.7.0+ compatibility (get_use_address_to()
+  # breaking change, esphome/esphome#17432). Switch back to the upstream
+  # github://oxan/esphome-stream-server@master once
+  # https://github.com/oxan/esphome-stream-server/pull/71 is merged.
+  - source: github://syssi/esphome-stream-server@esphome-2026.7.0-compat
 
 ota:
   platform: esphome
