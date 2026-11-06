@@ -18,7 +18,7 @@ esphome:
   name: ${name}
   friendly_name: ${name}
   comment: ${device_description}
-  min_version: 2025.7.0
+  min_version: 2026.10.0
   project:
     name: "syssi.esphome-zb-gw03"
     version: 2.3.0
@@ -32,13 +32,6 @@ esp32:
   board: esp-wrover-kit
   framework:
     type: esp-idf
-
-external_components:
-  # Temporary fork for ESPHome 2026.7.0+ compatibility (get_use_address_to()
-  # breaking change, esphome/esphome#17432). Switch back to the upstream
-  # github://oxan/esphome-stream-server@master once
-  # https://github.com/oxan/esphome-stream-server/pull/71 is merged.
-  - source: github://syssi/esphome-stream-server@esphome-2026.7.0-compat
 
 ota:
   platform: esphome
@@ -57,9 +50,10 @@ uart:
   tx_pin: GPIO2
   baud_rate: 115200
 
-stream_server:
-  uart_id: uart_zigbee
-  port: 6638
+uart_tcp:
+  - uart_id: uart_zigbee
+    role: server
+    port: 6638
 
 switch:
   - platform: restart
