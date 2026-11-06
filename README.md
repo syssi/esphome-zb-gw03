@@ -43,7 +43,6 @@ None.
 * https://github.com/arendst/Tasmota/tree/development/tools/fw_SonoffZigbeeBridge_ezsp
 * https://github.com/xsp1989/zigbeeFirmware
 * https://github.com/tube0013/tube_gateways
-* https://github.com/oxan/esphome-stream-server
 * https://github.com/thegroove/esphome-serial-server
 * https://github.com/thegroove/esphome-zbbridge
 * https://github.com/thegroove/esphome-zeroconf
