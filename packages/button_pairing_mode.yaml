@@ -1,6 +1,3 @@
-# Don't use the button component as long as ESPHome 2021.9.3
-# is required because of the buggy esphome-stream-server
-#
 # button:
 #   - platform: template
 #     name: "Enable Pairing Mode"
