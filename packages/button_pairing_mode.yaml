@@ -15,6 +15,4 @@ binary_sensor:
       number: GPIO34
       inverted: true
     on_press:
-      - switch.turn_on: download_mode
-      - delay: 5s
-      - switch.turn_off: download_mode
+      - button.press: zigbee_pairing_mode
