@@ -1,16 +1,8 @@
-# button:
-#   - platform: template
-#     name: "Enable Pairing Mode"
-#     on_press:
-#       - switch.turn_on: download_mode
-#       - delay: 5s
-#       - switch.turn_off: download_mode
-
-switch:
+button:
   - platform: template
     id: zigbee_pairing_mode
-    name: "Toggle pairing mode"
-    turn_on_action:
+    name: "Enable Pairing Mode"
+    on_press:
       - switch.turn_on: download_mode
       - delay: 5s
       - switch.turn_off: download_mode
